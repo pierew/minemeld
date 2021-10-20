@@ -1,0 +1,39 @@
+nodes:
+  microsoft-intune-ipv4:
+    inputs: []
+    output: true
+    prototype: minemeldlocal.microsoft-intune-ipv4
+  microsoft-intune-url:
+    inputs: []
+    output: true
+    prototype: minemeldlocal.microsoft-intune-url
+  microsoft-defender-url:
+    inputs: []
+    output: true
+    prototype: minemeldlocal.microsoft-defender-url
+  microsoft-defender-ipv4:
+    inputs: []
+    output: true
+    prototype: minemeldlocal.microsoft-defender-ipv4
+  Microsoft-IP:
+    inputs:
+      - microsoft-intune-ipv4
+      - microsoft-defender-ipv4
+    output: true
+    prototype: stdlib.aggregatorIPv4Generic
+  Microsoft-URL:
+    inputs:
+      - microsoft-intune-url
+      - microsoft-defender-url
+    output: true
+    prototype: stdlib.aggregatorURL
+  Microsoft-Output-IPv4:
+    inputs:
+      - Microsoft-IP
+    output: false
+    prototype: stdlib.feedHCGreen
+  Microsoft-Output-URL:
+    inputs:
+      - Microsoft-URL
+    output: false
+    prototype: stdlib.feedHCGreen
