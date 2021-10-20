@@ -1,0 +1,64 @@
+
+   
+url: https://docs.microsoft.com/en-us/microsoft-365/security/defender-endpoint/configure-proxy-internet?view=o365-worldwide#enable-access-to-microsoft-defender-for-endpoint-service-urls-in-the-proxy-server
+description: >
+    Microsoft Defender Endpoints
+prototypes:
+    DEFENDER-IPv4:
+        author: Piere Woehl
+        development_status: STABLE
+        description: Microsoft Defender IPv4
+        node_type: miner
+        indicator_types:
+            - IPv4
+        tags:
+            - ConfidenceHigh
+            - ShareLevelGreen
+        class: minemeld.ft.json.SimpleJSON
+        config:
+            age_out:
+                default: null
+                interval: 257
+                sudden_death: true
+            attributes:
+                confidence: 100
+                share_level: green
+                type: IPv4
+            extractor: result
+            fields:
+            - category
+            - serviceRegion
+            - serviceArea
+            indicator: ip
+            prefix: defender
+            source_name: microsoft.defender
+            url: https://serviceendpoints.azurewebsites.net/feeds/defender/feed.json
+    DEFENDER-URL:
+        author: Piere Woehl
+        development_status: STABLE
+        description: Microsoft Defender URL
+        node_type: miner
+        indicator_types:
+            - IPv4
+        tags:
+            - ConfidenceHigh
+            - ShareLevelGreen
+        class: minemeld.ft.json.SimpleJSON
+        config:
+            age_out:
+                default: null
+                interval: 257
+                sudden_death: true
+            attributes:
+                confidence: 100
+                share_level: green
+                type: URL
+            extractor: result
+            fields:
+            - category
+            - serviceRegion
+            - serviceArea
+            indicator: url
+            prefix: defender
+            source_name: microsoft.defender
+            url: https://serviceendpoints.azurewebsites.net/feeds/defender/feed.json
