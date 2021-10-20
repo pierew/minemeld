@@ -1,0 +1,19 @@
+# DESCRIPTION: Pulls URL for Microsoft Defender
+# CLASS: minemeld.ft.json.SimpleJSON
+age_out:
+    default: null
+    interval: 257
+    sudden_death: true
+attributes:
+    confidence: 100
+    share_level: green
+    type: URL
+extractor: result
+fields:
+- category
+- serviceRegion
+- serviceArea
+indicator: url
+prefix: defender
+source_name: microsoft.defender
+url: https://serviceendpoints.azurewebsites.net/feeds/defender/feed.json
