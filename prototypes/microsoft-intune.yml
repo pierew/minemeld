@@ -1,8 +1,7 @@
 
    
 url: https://docs.microsoft.com/en-us/mem/intune/fundamentals/intune-endpoints
-description: >
-    Microsoft Intune Endpoints
+description: Microsoft Intune Endpoints
 prototypes:
     DEFENDER-IPv4:
         author: Piere Woehl
@@ -26,7 +25,7 @@ prototypes:
                 type: IPv4
             extractor: result
             fields:
-            - category
+                - category
             indicator: ip
             prefix: intune
             source_name: microsoft.intune
@@ -53,7 +52,7 @@ prototypes:
                 type: URL
             extractor: result
             fields:
-            - category
+                - category
             indicator: url
             prefix: intune
             source_name: microsoft.intune
