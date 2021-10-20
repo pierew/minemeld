@@ -1,8 +1,6 @@
-
-   
+ 
 url: https://docs.microsoft.com/en-us/microsoft-365/security/defender-endpoint/configure-proxy-internet?view=o365-worldwide#enable-access-to-microsoft-defender-for-endpoint-service-urls-in-the-proxy-server
-description: >
-    Microsoft Defender Endpoints
+description: Microsoft Defender Endpoints
 prototypes:
     DEFENDER-IPv4:
         author: Piere Woehl
@@ -26,9 +24,9 @@ prototypes:
                 type: IPv4
             extractor: result
             fields:
-            - category
-            - serviceRegion
-            - serviceArea
+                - category
+                - serviceRegion
+                - serviceArea
             indicator: ip
             prefix: defender
             source_name: microsoft.defender
@@ -55,9 +53,9 @@ prototypes:
                 type: URL
             extractor: result
             fields:
-            - category
-            - serviceRegion
-            - serviceArea
+                - category
+                - serviceRegion
+                - serviceArea
             indicator: url
             prefix: defender
             source_name: microsoft.defender
